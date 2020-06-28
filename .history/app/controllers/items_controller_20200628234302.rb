@@ -33,17 +33,17 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :volume, :unit)
+    params.require(:item).permit(:name, :volume, :units)
   end
 
   def calc_volume(item)
-    if item.unit == 'gallons'
+    if item.units == 'gallons'
       item.volume
-    elsif item.unit == 'ounces'
+    elsif item.units == 'ounces'
       item.volume / 128
-    elsif item.unit == 'litres'
+    elsif item.units == 'litres'
       item.volume / 3.785
-    elsif item.unit == 'millilitres'
+    elsif item.units == 'millilitres'
       item.volume / 3785
     end
   end

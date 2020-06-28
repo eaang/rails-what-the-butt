@@ -2,6 +2,6 @@
 <%= simple_form_for @item do |f| %>
   <%= f.input :name %>
   <%= f.input :volume, as: :float %>
-  <%= f.input :unit, collection: %w[gallons ounces litres millilitres] %>
+  <%= f.input :units, collection: %w[gallons cups litres millilitres] %>
   <%= f.button :submit %>
 <% end %>

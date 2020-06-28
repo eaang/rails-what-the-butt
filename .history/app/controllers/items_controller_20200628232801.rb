@@ -20,12 +20,11 @@ class ItemsController < ApplicationController
 
   def calculate
     @item = Item.find(params[:id])
-    volume = calc_volume(@item)
     if params[:measure] == 'butt'
-      @results = (volume / 126).round(3)
+      @results = (@item.volume / 126).round(3)
       @unit = 'butt'
     elsif params[:measure] == 'shit'
-      @results = (volume / 0.121).round(3)
+      @results = (@item.volume / 0.121).round(3)
       @unit = 'shit'
     end
   end
@@ -33,18 +32,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :volume, :unit)
-  end
-
-  def calc_volume(item)
-    if item.unit == 'gallons'
-      item.volume
-    elsif item.unit == 'ounces'
-      item.volume / 128
-    elsif item.unit == 'litres'
-      item.volume / 3.785
-    elsif item.unit == 'millilitres'
-      item.volume / 3785
-    end
+    params.require(:item).permit(:name, :volume, :units)
   end
 end
