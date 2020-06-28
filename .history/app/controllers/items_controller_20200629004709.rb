@@ -21,7 +21,6 @@ class ItemsController < ApplicationController
   def calculate
     @item = Item.find(params[:id])
     volume = calc_volume(@item)
-    unit = get_unit(params)
     @results = (volume / unit).round(3)
     @unit = params[:measure]
   end

@@ -21,7 +21,13 @@ class ItemsController < ApplicationController
   def calculate
     @item = Item.find(params[:id])
     volume = calc_volume(@item)
-    unit = get_unit(params)
+    if params[:measure] == 'butt'
+      unit = 126
+    elsif params[:measure] == 'shit'
+      unit = 0.121
+    elsif params[:measure] == 'flush'
+      unit = 3.5
+    end
     @results = (volume / unit).round(3)
     @unit = params[:measure]
   end
@@ -44,13 +50,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  def get_unit(params)
-    if params[:measure] == 'butt'
-      126
-    elsif params[:measure] == 'shit'
-      0.121
-    elsif params[:measure] == 'flush'
-      3.5
-    end
+  def conversion(params)
   end
 end
