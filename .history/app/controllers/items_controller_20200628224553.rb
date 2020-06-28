@@ -12,9 +12,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create(item_params)
-
-    redirect_to @item
+    @item = Item.new(item_params)
   end
 
   def calculate
@@ -31,6 +29,5 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :volume)
   end
 end

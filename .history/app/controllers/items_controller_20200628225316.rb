@@ -12,9 +12,8 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create(item_params)
-
-    redirect_to @item
+    @item = Item.new(item_params)
+    @item = Item.save
   end
 
   def calculate

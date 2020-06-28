@@ -13,8 +13,6 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create(item_params)
-
-    redirect_to @item
   end
 
   def calculate

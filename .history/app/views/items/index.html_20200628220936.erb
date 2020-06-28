@@ -1,0 +1,10 @@
+<h1>CHOOSE AN ITEM</h1>
+<% @items.each do |item| %>
+<li>
+<%= link_to item do %>
+  <%= item.name %>: <%= item.volume %>
+<% end %>
+
+
+</li>
+<% end %>

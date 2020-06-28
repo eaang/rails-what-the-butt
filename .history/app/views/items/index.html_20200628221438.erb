@@ -2,8 +2,8 @@
 <% @items.each do |item| %>
   <li>
     <%= link_to item do %>
-      <%= item.name.titleize %>
+      <%= item.name %>
     <% end %>
   </li>
 <% end %>
-<li><%= link_to "Your Own Item", new_item_path %></li>
+<li><%= link_to "Your own item" new_item_path %>

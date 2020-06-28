@@ -1,0 +1,8 @@
+<h2>THE RESULT</h2>
+<%= @item.name %>
+
+<h3>WORKS OUT TO</h3>
+<%= @results %> <%= @unit.upcase %>LOADS
+
+<li><%= link_to "NEW ITEM?", items_path %></li>
+<li><%= link_to "NEW MEASURE?", item_path(@item) %></li>
