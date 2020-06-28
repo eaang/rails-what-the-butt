@@ -11,4 +11,4 @@ Item.create(name: 'iced venti latte', volume: 0.1875)
 Item.create(name: 'six pack of beer', volume: 0.5625)
 Item.create(name: 'shipping container', volume: 10_173.5)
 Item.create(name: 'cask of amontillado', volume: 126)
-Item.create(name: 'full tank of gas', volume: 15)
+
