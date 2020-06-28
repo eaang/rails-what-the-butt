@@ -4,9 +4,9 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootswatch/dist/sketchy/variables";
-@import "bootstrap/scss/bootstrap";
-@import "bootswatch/dist/sketchy/bootswatch";
+@import "~bootswatch/dist/Sketchy/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/Sketchy/bootswatch";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 

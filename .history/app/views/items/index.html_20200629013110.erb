@@ -2,7 +2,7 @@
 <% @items.each do |item| %>
   <li>
     <%= link_to item do %>
-      <%= item.symbol %> <%= item.name.upcase %>
+      <%= item.symbol item.name.titleize %>
     <% end %>
   </li>
 <% end %>
