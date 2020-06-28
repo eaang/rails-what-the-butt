@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    Item.last.destroy if Item.all.length == 7
+    Item.last.destroy if @Item.all.length == 7
     @items = Item.all
   end
 
