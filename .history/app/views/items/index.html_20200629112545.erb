@@ -4,7 +4,7 @@
 <div class="card-container">
   <% @items.each do |item| %>
     <%= link_to item, class: 'text-decoration-none' do %>
-      <div class="card-category color-<%= (1..10).to_a.sample %>">
+      <div class="card-category ">
         <div class="symbol align-self-center">
           <%= emojify ":#{item.symbol}:" %>
         </div>

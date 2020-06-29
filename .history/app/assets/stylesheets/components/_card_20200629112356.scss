@@ -8,8 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: space-around;
-    border-radius: 30px;
-    color: black;
+    border-radius: 30px; 
     border: 10px solid black;
     font-size: 24px;
     padding: 1em;
@@ -20,16 +19,6 @@
   .create {
     border: 10px dashed black;
   }
-  .color-1 { background-color: #df494e;}
-  .color-2 { background-color: #68a5b7;}
-  .color-3 { background-color: #8f978e;}
-  .color-4 { background-color: #d8b6ad;}
-  .color-5 { background-color: #677b94;}
-  .color-6 { background-color: #677b94;}
-  .color-7 { background-color: #66be98;}
-  .color-8 { background-color: #fcd06d;}
-  .color-9 { background-color: #f8a427;}
-  .color-10 { background-color: #d42b14;}
 }
 
 // Smallest device

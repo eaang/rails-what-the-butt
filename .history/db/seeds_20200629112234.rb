@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Item.create(name: 'swimming pool', volume: 660_000, unit: 'gallons', symbol: 'swimmer')
+Item.create(name: 'olympic size swimming pool', volume: 660_000, unit: 'gallons', symbol: 'swimmer')
 Item.create(name: 'tub of ice cream', volume: 16, unit: 'ounces', symbol: 'ice_cream')
 Item.create(name: 'ice rink', volume: 10_600, unit: 'gallons', symbol: 'ice_skate')
 Item.create(name: 'oil drum', volume: 55, unit: 'gallons', symbol: 'oil_drum')
