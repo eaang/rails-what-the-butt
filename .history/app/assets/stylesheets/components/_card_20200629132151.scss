@@ -17,6 +17,7 @@
     }
     .item-name {
       min-height: 3em;
+      min-width: 200px;
     }
   }  
   .create {
@@ -36,9 +37,6 @@
 @media (min-width: 100px) and (max-width: 575px) {
   .card-container {
     grid-template-columns: 1fr 1fr;
-    .card-category {
-      padding: 1em 0em;
-    }
   }
 }
 
