@@ -12,4 +12,4 @@ Item.create(name: 'ice rink', volume: 10_600, unit: 'gallons', symbol: 'ice_skat
 Item.create(name: 'oil drum', volume: 55, unit: 'gallons', symbol: 'oil_drum')
 Item.create(name: 'cask of amontillado', volume: 126, unit: 'gallons', symbol: 'wine_glass')
 Item.create(name: 'full tank of gas', volume: 15, unit: 'gallons', symbol: 'fuelpump')
-Item.create(name: 'average burrito', volume: 750, unit: 'millilitres', symbol: 'burrito')
+Item.create(name: 'average burrito', volume: 750, unit: 'mil', symbol: 'burrito')

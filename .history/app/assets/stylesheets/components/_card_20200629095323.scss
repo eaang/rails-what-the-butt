@@ -1,24 +1,8 @@
+
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-  .card-category {
-    min-height: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: space-around;
-    border-radius: 30px; 
-    border: 10px solid black;
-    font-size: 24px;
-    padding: 1em;
-    .symbol {
-      font-size: 48px;
-    }
-  }  
-  .create {
-    border: 10px dashed black;
-  }
 }
 
 // Smallest device

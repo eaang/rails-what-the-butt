@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-
     <title>WHAT THE BUTT</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
-    <div class="container">
-      <%= link_to root_path, class: 'text-decoration-none' do %>
-        <%= image_tag "https://res.cloudinary.com/dqywsmiax/image/upload/v1593357534/butts/5c8b3090c4c2fd0649919082_pointing-butt_a1dmpv.gif",
+  <div class="container">
+  <%= link_to root_path, class: 'text-decoration-none' do %>
+  <%= image_tag "https://res.cloudinary.com/dqywsmiax/image/upload/v1593357534/butts/5c8b3090c4c2fd0649919082_pointing-butt_a1dmpv.gif",
   class: "avatar-large" %> WHAT THE BUTT
-      <% end %>
-      <%= yield %>
-    </div>
+  <% end %>
+  <div class="row col-12">
+    <%= yield %>
+  </div>
+  </div>
   </body>
 </html>

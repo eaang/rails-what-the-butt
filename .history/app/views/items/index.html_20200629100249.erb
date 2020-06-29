@@ -6,10 +6,10 @@
     <%= link_to item, class: 'text-decoration-none' do %>
       <div class="card-category">
         <div class="symbol align-self-center">
-          <%= emojify ":#{item.symbol}:" %>
+          <%= item.symbol %>
         </div>
         <div class="align-self-center">
-          <center><%= item.name.upcase %></center>
+          <%= item.name.upcase %>
         </div>
       </div>
     <% end %>
@@ -17,10 +17,10 @@
   <%= link_to new_item_path, class: 'text-decoration-none' do %>
     <div class="card-category create">
       <div class="symbol align-self-center">
-          <%= emojify ":package:" %>
+        📦
       </div>
       <div class="align-self-center">
-        <center>YOUR OWN ITEM</center>
+        YOUR OWN ITEM
       </div>
     </div>
   <% end %>

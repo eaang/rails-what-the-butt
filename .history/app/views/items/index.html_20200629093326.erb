@@ -1,0 +1,9 @@
+<h2>CHOOSE AN ITEM</h2>
+<% @items.each do |item| %>
+  <li>
+    <%= link_to item, class: 'text-decoration-none' do %>
+      <%= item.symbol %> <%= item.name.upcase %>
+    <% end %>
+  </li>
+<% end %>
+<li><%= link_to "YOUR OWN ITEM", new_item_path %></li>

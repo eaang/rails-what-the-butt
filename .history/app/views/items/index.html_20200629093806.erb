@@ -1,0 +1,23 @@
+<div class="row col-12 justify-content-center">
+<h2>CHOOSE AN ITEM</h2>
+</div>
+<div class="row">
+<% @items.each do |item| %>
+<div class="card">
+<div class="card-header">
+<%= item.symbol %> 
+</div>
+  <div class="card-body">
+    <%= item.name.upcase %>
+  </div>
+</div>
+<% end %>
+<div class="card">
+<div class="card-header">
+
+</div>
+  <div class="card-body">
+    <%= link_to "YOUR OWN ITEM", new_item_path %>
+  </div>
+</div>
+</div>
