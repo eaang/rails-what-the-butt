@@ -11,22 +11,18 @@
     color: black;
     border: 10px solid black;
     font-size: 24px;
-    padding: 1em;
-    box-shadow: 0 6px rgb(153, 153, 153);
+    padding: 1em 0em;
+    box-shadow: 0 6px rgb(65, 65, 65);
     .symbol {
       font-size: 48px;
     }
     .item-name {
       min-height: 3em;
     }
-  }
-  .card-category:active {
-    box-shadow: 0 3px rgb(153, 153, 153);
-    transform: translateY(3px);
-  }
+  }  
   .create {
     border: 10px dashed black;
-    box-shadow: none;
+    box-shadow: 0;
   }
   .color-1 { background: rgba(255, 0, 0, 0.6); }
   .color-2 { background: rgba(255, 142, 0, 0.6); }
@@ -36,15 +32,16 @@
   .color-6 { background: rgba(64, 0, 152, 0.6); }
   .color-7 { background: rgba(142, 0, 142, 0.6); }
   .color-8 { background: rgba(255, 105, 180, 0.6); }
+  :active {
+    box-shadow: 0 3px gray;
+    transform: translateY(3px);
+  }
 }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .card-container {
     grid-template-columns: 1fr 1fr;
-    .card-category {
-    padding: 1em 0em;
-    }
   }
 }
 
@@ -52,9 +49,6 @@
 @media (min-width: 576px) {
   .card-container {
     grid-template-columns: 1fr 1fr;
-    .card-category {
-    padding: 1em 0em;
-    }
   }
 }
 
