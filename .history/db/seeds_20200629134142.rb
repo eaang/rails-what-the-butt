@@ -14,4 +14,4 @@ Item.create(name: 'cask of amontillado', volume: 126, unit: 'gallons', symbol: '
 Item.create(name: 'tank of gas', volume: 15, unit: 'gallons', symbol: 'fuelpump')
 Item.create(name: 'average burrito', volume: 750, unit: 'millilitres', symbol: 'burrito')
 Item.create(name: 'blood of 1 adult', volume: 1.35, unit: 'gallons', symbol: 'syringe')
-Item.create(name: 'standard sized coffin', volume: 886, unit: 'litres', symbol: 'coffin')
+Item.create(name: 'standard coffin', volume: 886, unit: 'litres', symbol: 'coffin')
