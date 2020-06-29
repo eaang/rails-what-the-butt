@@ -43,7 +43,7 @@
   .card-container {
     grid-template-columns: 1fr 1fr;
     .card-category {
-      padding: 1em 0em;
+    padding: 1em 0em;
     }
   }
 }
@@ -52,13 +52,16 @@
 @media (min-width: 576px) {
   .card-container {
     grid-template-columns: 1fr 1fr;
+    .card-category {
+    padding: 1em 0em;
+    }
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .card-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

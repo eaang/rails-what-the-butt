@@ -1,7 +1,7 @@
 <div class="row justify-content-center my-3">
-  <h1>CHOOSE AN ITEM</h1>
+  <h2>CHOOSE AN ITEM</h2>
 </div>
-<div class="card-container col-12 col-md-10 offset-md-1 mb-3">
+<div class="card-container offset-2 mb-3">
   <% @items.each do |item| %>
     <%= link_to item, class: 'text-decoration-none' do %>
       <div class="card-category color-<%= (1..8).to_a.sample %>">
