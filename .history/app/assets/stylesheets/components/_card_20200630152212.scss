@@ -58,7 +58,7 @@
   }
   #measure-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    .measure-card {
+    #measure-card {
       grid-column: 2 / span 2;
     }
   }
@@ -75,12 +75,6 @@
       grid-column: 2 / span 2;
     }
   }
-  #measure-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    .measure-card {
-      grid-column: 2 / span 2;
-    }
-  }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -91,12 +85,6 @@
   #show-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     #choice-card {
-      grid-column: 2 / span 2;
-    }
-  }
-  #measure-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    .measure-card {
       grid-column: 2 / span 2;
     }
   }
@@ -115,8 +103,8 @@
   }
   #measure-container {
     grid-template-columns: 1fr 1fr 1fr;
-    .measure-card {
-      grid-column: auto / span 1;
+    #measure-card {
+      grid-span: 1;
     }
   }
 }

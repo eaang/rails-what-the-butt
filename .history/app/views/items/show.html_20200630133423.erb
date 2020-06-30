@@ -2,9 +2,6 @@
   <h1>YOU CHOSE...</h1>
 </div>
 <div id="show-container" class="card-container col-12 col-md-10  mb-3 align-self-center">
-  <div class="text-right align-self-center display-4">
-    <%= emojify ":sparkles:" %>
-  </div>
   <div id="choice-card" class="card-category color-<%= (1..8).to_a.sample %>">
     <div class="symbol align-self-center">
       <%= emojify ":#{@item.symbol}:" %>
@@ -13,15 +10,12 @@
       <center><%= @item.name.upcase %></center>
     </div>
   </div>
-  <div class="text-left align-self-center display-4">
-    <%= emojify ":sparkles:" %>
-  </div>
 </div>
 <div class="row justify-content-center my-3">
   <h2>WHAT'S THAT IN:</h2>
 </div>
-<div id="measure-container" class="card-container col-12 col-md-10  mb-3 align-self-center">
-  <div class="measure-card card-category color-<%= (1..8).to_a.sample %>">
+<div class="card-container col-12 col-md-10  mb-3 align-self-center">
+  <div class="card-category color-<%= (1..8).to_a.sample %>">
     <div class="symbol align-self-center">
       <%= emojify ":peach:" %>
     </div>
@@ -29,7 +23,7 @@
       <center>BOUNTIFUL BUTTLOADS</center>
     </div>
   </div>
-  <div class="measure-card card-category color-<%= (1..8).to_a.sample %>">
+  <div class="card-category color-<%= (1..8).to_a.sample %>">
     <div class="symbol align-self-center">
       <%= emojify ":hankey:" %>
     </div>
@@ -37,7 +31,7 @@
       <center>STUPDENDOUS SHITLOADS</center>
     </div>
   </div>
-  <div class="measure-card card-category color-<%= (1..8).to_a.sample %>">
+  <div class="card-category color-<%= (1..8).to_a.sample %>">
     <div class="symbol align-self-center">
       <%= emojify ":toilet:" %>
     </div>

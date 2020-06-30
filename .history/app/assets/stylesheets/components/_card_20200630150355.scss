@@ -115,9 +115,6 @@
   }
   #measure-container {
     grid-template-columns: 1fr 1fr 1fr;
-    .measure-card {
-      grid-column: auto / span 1;
-    }
   }
 }
 
@@ -131,5 +128,8 @@
     #choice-card {
       grid-column: 2;
     }
+  }
+  #measure-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

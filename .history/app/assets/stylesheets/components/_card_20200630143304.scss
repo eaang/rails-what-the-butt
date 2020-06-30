@@ -57,10 +57,7 @@
     }
   }
   #measure-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    .measure-card {
-      grid-column: 2 / span 2;
-    }
+    grid-template-columns: 1fr;
   }
 }
 
@@ -76,10 +73,7 @@
     }
   }
   #measure-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    .measure-card {
-      grid-column: 2 / span 2;
-    }
+    grid-template-columns: 1fr;
   }
 }
 
@@ -95,10 +89,7 @@
     }
   }
   #measure-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    .measure-card {
-      grid-column: 2 / span 2;
-    }
+    grid-template-columns: 1fr;
   }
 }
 
@@ -111,12 +102,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     #choice-card {
       grid-column: 2;
-    }
-  }
-  #measure-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    .measure-card {
-      grid-column: auto / span 1;
     }
   }
 }
