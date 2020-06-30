@@ -51,10 +51,7 @@
     }
   }
   #show-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    #choice-card {
-      grid-column: 2 / span 2;
-    }
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -64,10 +61,7 @@
     grid-template-columns: 1fr 1fr;
   }
   #show-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    #choice-card {
-      grid-column: 2 / span 2;
-    }
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -77,10 +71,7 @@
     grid-template-columns: 1fr 1fr;
   }
   #show-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    #choice-card {
-      grid-column: 2 / span 2;
-    }
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -89,23 +80,11 @@
   .card-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  #show-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    #choice-card {
-      grid-column: 2;
-    }
-  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .card-container {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  #show-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    #choice-card {
-      grid-column: 2;
-    }
   }
 }

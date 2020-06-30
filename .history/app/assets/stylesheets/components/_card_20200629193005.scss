@@ -20,7 +20,7 @@
       min-height: 3em;
     }
   }
-  .pressable:active {
+  .card-category:active {
     box-shadow: 0 3px rgb(153, 153, 153);
     transform: translateY(3px);
   }
@@ -39,6 +39,9 @@
   #choice-card {
     grid-column-start: 2;
     box-shadow: none;
+    :active {
+      box-shadow: none;
+    }
   }
 }
 
@@ -50,24 +53,12 @@
       padding: 1em 0em;
     }
   }
-  #show-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    #choice-card {
-      grid-column: 2 / span 2;
-    }
-  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .card-container {
     grid-template-columns: 1fr 1fr;
-  }
-  #show-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    #choice-card {
-      grid-column: 2 / span 2;
-    }
   }
 }
 
@@ -76,12 +67,6 @@
   .card-container {
     grid-template-columns: 1fr 1fr;
   }
-  #show-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    #choice-card {
-      grid-column: 2 / span 2;
-    }
-  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -89,23 +74,11 @@
   .card-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  #show-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    #choice-card {
-      grid-column: 2;
-    }
-  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .card-container {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  #show-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    #choice-card {
-      grid-column: 2;
-    }
   }
 }
