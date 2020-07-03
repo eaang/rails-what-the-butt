@@ -1,0 +1,25 @@
+
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  border-radius: 30px;
+  color: black;
+  border: 10px solid black;
+  font-size: 24px;
+  padding: 1em;
+  box-shadow: 0 6px rgb(153, 153, 153);
+  .symbol {
+    font-size: 48px;
+  }
+  .item-name {
+    min-height: 3em;
+  }
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}

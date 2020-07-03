@@ -1,0 +1,23 @@
+
+.carousel-cell {
+  width: 33%;
+  margin-right: 50px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  border-radius: 30px;
+  color: black;
+  border: 10px solid black;
+  font-size: 24px;
+  padding: 1em;
+  box-shadow: 0 6px rgb(153, 153, 153);
+  .symbol {
+    font-size: 48px;
+    text-align: center;
+  }
+  .item-name {
+    min-height: 3em;
+  }
+}

@@ -1,0 +1,66 @@
+<div class="row justify-content-center my-3">
+  <h1>YOU CHOSE...</h1>
+</div>
+<div id="show-container" class="card-container col-12 col-md-10  mb-3 align-self-center">
+  <div class="text-right align-self-center display-4">
+    <%= emojify ":sparkles:" %>
+  </div>
+  <div id="choice-card" class="card-category color-<%= (1..8).to_a.sample %>">
+    <div class="symbol align-self-center">
+      <%= emojify ":#{@item.symbol}:" %>
+    </div>
+    <div class="align-self-center item-name">
+      <center><%= @item.name.upcase %></center>
+    </div>
+  </div>
+  <div class="text-left align-self-center display-4">
+    <%= emojify ":sparkles:" %>
+  </div>
+</div>
+<div class="row justify-content-center my-3">
+  <h2>WHAT'S THAT IN:</h2>
+</div>
+
+<div class="main-gallery js-flickity"
+  data-flickity-options='{ "cellAlign": "center", "contain": true }'>
+
+  <div class="gallery-cell col-12">
+      <%= link_to calculate_path(measure: 'butt'), method: :post, class: 'text-decoration-none' do %>
+      <div class="measure-category col-3 pressable color-<%= (1..8).to_a.sample %>">
+        <div class="symbol align-self-center">
+          <%= emojify ":peach:" %>
+        </div>
+        <div class="align-self-center item-name text-center">
+          BOUNTIFUL BUTTLOADS
+        </div>
+      </div>
+      <% end %> 
+  </div>
+
+  <div class="gallery-cell">
+      <%= link_to calculate_path(measure: 'butt'), method: :post, class: 'text-decoration-none' do %>
+      <div class="measure-category pressable color-<%= (1..8).to_a.sample %>">
+        <div class="symbol align-self-center">
+          <%= emojify ":hankey:" %>
+        </div>
+        <div class="align-self-center item-name text-center">
+          STUPDENDOUS SHITLOADS
+        </div>
+      </div>
+      <% end %> 
+  </div>
+
+  <div class="gallery-cell">
+      <%= link_to calculate_path(measure: 'butt'), method: :post, class: 'text-decoration-none' do %>
+      <div class="measure-category pressable color-<%= (1..8).to_a.sample %>">
+        <div class="symbol align-self-center">
+          <%= emojify ":toilet:" %>
+        </div>
+        <div class="align-self-center item-name text-center">
+          FANTABULOUS FLUSHLOADS
+        </div>
+      </div>
+      <% end %> 
+  </div>
+
+</div>

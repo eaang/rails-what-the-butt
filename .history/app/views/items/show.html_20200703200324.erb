@@ -21,12 +21,13 @@
   <h2>WHAT'S THAT IN:</h2>
 </div>
 
-<div class="carousel col-12 col-md-10 align-self-center"
-  data-flickity='{ "wrapAround": true }'>
+<div class="main-gallery js-flickity col-12 col-md-10  mb-3 align-self-center"
+  data-flickity-options='{ "cellAlign": "center", "contain": true }'>
 
-  <div class="carousel-cell">
+  <div class="gallery-cell">
+  <div class="card-container">
     <%= link_to calculate_path(measure: 'butt'), method: :post, class: 'text-decoration-none' do %>
-    <div class="measure-category pressable color-<%= (1..8).to_a.sample %>">
+    <div class="measure-card card-category pressable color-<%= (1..8).to_a.sample %>">
       <div class="symbol align-self-center">
         <%= emojify ":peach:" %>
       </div>
@@ -36,32 +37,35 @@
     </div>
     <% end %> 
   </div>
+  </div>
 
-  <div class="carousel-cell">
-    <%= link_to calculate_path(measure: 'butt'), method: :post, class: 'text-decoration-none' do %>
-    <div class="measure-category pressable color-<%= (1..8).to_a.sample %>">
+  <div class="gallery-cell">
+  <div class="card-container">
+    <%= link_to calculate_path(measure: 'shit'), method: :post, class: 'text-decoration-none' do %>
+    <div class="measure-card card-category pressable color-<%= (1..8).to_a.sample %>">
       <div class="symbol align-self-center">
         <%= emojify ":hankey:" %>
       </div>
-      <div class="align-self-center item-name text-center">
-        STUPDENDOUS SHITLOADS
+      <div class="align-self-center item-name">
+        <center>STUPDENDOUS SHITLOADS</center>
       </div>
     </div>
-    <% end %> 
+    <% end %>
+  </div>
   </div>
 
-  <div class="carousel-cell">
-    <%= link_to calculate_path(measure: 'butt'), method: :post, class: 'text-decoration-none' do %>
-    <div class="measure-category pressable color-<%= (1..8).to_a.sample %>">
+  <div class="gallery-cell">
+  <div class="card-container">
+    <%= link_to calculate_path(measure: 'flush'), method: :post, class: 'text-decoration-none' do %>
+    <div class="measure-card card-category pressable color-<%= (1..8).to_a.sample %>">
       <div class="symbol align-self-center">
         <%= emojify ":toilet:" %>
       </div>
-      <div class="align-self-center item-name text-center">
-        FANTABULOUS FLUSHLOADS
+      <div class="align-self-center item-name">
+        <center>FANTABULOUS FLUSHLOADS</center>
       </div>
     </div>
-    <% end %> 
+    <% end %>
   </div>
-
+  </div>
 </div>
-

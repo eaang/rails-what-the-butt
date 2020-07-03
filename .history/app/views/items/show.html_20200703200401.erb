@@ -1,0 +1,71 @@
+<div class="row justify-content-center my-3">
+  <h1>YOU CHOSE...</h1>
+</div>
+<div id="show-container" class="card-container col-12 col-md-10  mb-3 align-self-center">
+  <div class="text-right align-self-center display-4">
+    <%= emojify ":sparkles:" %>
+  </div>
+  <div id="choice-card" class="card-category color-<%= (1..8).to_a.sample %>">
+    <div class="symbol align-self-center">
+      <%= emojify ":#{@item.symbol}:" %>
+    </div>
+    <div class="align-self-center item-name">
+      <center><%= @item.name.upcase %></center>
+    </div>
+  </div>
+  <div class="text-left align-self-center display-4">
+    <%= emojify ":sparkles:" %>
+  </div>
+</div>
+<div class="row justify-content-center my-3">
+  <h2>WHAT'S THAT IN:</h2>
+</div>
+
+<div class="main-gallery js-flickity col-12 col-md-10  mb-3 align-self-center"
+  data-flickity-options='{ "cellAlign": "center", "contain": true }'>
+
+  <div class="gallery-cell">
+    <div class="card-container">
+      <%= link_to calculate_path(measure: 'butt'), method: :post, class: 'text-decoration-none' do %>
+      <div class="measure-card card-category pressable color-<%= (1..8).to_a.sample %>">
+        <div class="symbol align-self-center">
+          <%= emojify ":peach:" %>
+        </div>
+        <div class="align-self-center item-name text-center">
+          BOUNTIFUL BUTTLOADS
+        </div>
+      </div>
+      <% end %> 
+    </div>
+  </div>
+
+  <div class="gallery-cell">
+    <div class="card-container">
+      <%= link_to calculate_path(measure: 'shit'), method: :post, class: 'text-decoration-none' do %>
+      <div class="measure-card card-category pressable color-<%= (1..8).to_a.sample %>">
+        <div class="symbol align-self-center">
+          <%= emojify ":hankey:" %>
+        </div>
+        <div class="align-self-center item-name">
+          <center>STUPDENDOUS SHITLOADS</center>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="gallery-cell">
+  <div class="card-container">
+    <%= link_to calculate_path(measure: 'flush'), method: :post, class: 'text-decoration-none' do %>
+    <div class="measure-card card-category pressable color-<%= (1..8).to_a.sample %>">
+      <div class="symbol align-self-center">
+        <%= emojify ":toilet:" %>
+      </div>
+      <div class="align-self-center item-name">
+        <center>FANTABULOUS FLUSHLOADS</center>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  </div>
+</div>

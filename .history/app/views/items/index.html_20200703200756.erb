@@ -1,0 +1,27 @@
+<div class="row justify-content-center my-3">
+  <h1>CHOOSE AN ITEM</h1>
+</div>
+<div class="card-container col-12 col-md-10 offset-md-1 mb-3">
+  <% @items.each do |item| %>
+    <%= link_to item, class: 'text-decoration-none' do %>
+      <div class="card-category pressable color-<%= (1..8).to_a.sample %>">
+        <div class="symbol align-self-center">
+          <%= emojify ":#{item.symbol}:" %>
+        </div>
+        <div class="align-self-center item-name">
+          <center><%= item.name.upcase %></center>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <%= link_to new_item_path, class: 'text-decoration-none' do %>
+    <div class="card-category create">
+      <div class="symbol align-self-center">
+          <%= emojify ":package:" %>
+      </div>
+      <div class="align-self-center item-name">
+        <center>MAKE YOUR OWN!</center>
+      </div>
+    </div>
+  <% end %>
+</div>
