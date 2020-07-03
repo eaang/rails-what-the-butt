@@ -15,3 +15,11 @@ import 'bootstrap';
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+var Flickity = require('flickity');
+
+var flkty = new Flickity( '.carousel', {
+  // options
+  wrapAround: true
+});
+
+flkty

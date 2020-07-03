@@ -15,3 +15,9 @@ import 'bootstrap';
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+const elem = document.querySelector('.carousel');
+const flkty = new Flickity( elem, {
+  // options
+  wrapAround: true
+});
+flkty

@@ -1,7 +1,11 @@
+
+.carousel {
+  border-left: 10px solid black;
+  border-right: 10px solid black;
+}
 .carousel-cell {
   width: 50%;
   margin-right: 40px;
-  height: 230px;
   .measure-category {
     display: flex;
     flex-direction: column;
@@ -12,6 +16,7 @@
     border: 10px solid black;
     font-size: 24px;
     padding: 1em;
+    box-shadow: 0 6px rgb(153, 153, 153);
     .symbol {
       font-size: 48px;
       text-align: center;

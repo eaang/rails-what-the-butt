@@ -5,7 +5,7 @@
   <div class="text-right align-self-center display-4">
     <%= emojify ":sparkles:" %>
   </div>
-  <div id="choice-card" class="mb-4 mt-3 card-category color-<%= (1..8).to_a.sample %>">
+  <div id="choice-card" class="card-category color-<%= (1..8).to_a.sample %>">
     <div class="symbol align-self-center">
       <%= emojify ":#{@item.symbol}:" %>
     </div>
@@ -21,8 +21,8 @@
   <h2>WHAT'S THAT IN:</h2>
 </div>
 
-<div class="carousel col-12 col-md-10 p-0 my-3 align-self-center"
-data-flickity='{ "wrapAround": true, pageDots: false }'>
+<div class="carousel col-12 col-md-10 p-0 mt-3 mb-5 align-self-center"
+  data-flickity='{ "wrapAround": true }'>
 
   <div class="carousel-cell">
     <%= link_to calculate_path(measure: 'butt'), method: :post, class: 'text-decoration-none' do %>
