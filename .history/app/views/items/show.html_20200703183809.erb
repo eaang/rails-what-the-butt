@@ -20,19 +20,18 @@
 <div class="row justify-content-center my-3">
   <h2>WHAT'S THAT IN:</h2>
 </div>
-<div class="card-container col-12 col-md-10  mb-3 align-self-center">
-  <%= link_to calculate_path(measure: 'butt'), method: :post, class: 'text-decoration-none' do %>
-  <div class="card-category pressable color-<%= (1..8).to_a.sample %>">
+<div id="measure-container" class="card-container col-12 col-md-10  mb-3 align-self-center">
+  <%= link_to calculate_url do %>
+  <div class="measure-card card-category color-<%= (1..8).to_a.sample %>">
     <div class="symbol align-self-center">
       <%= emojify ":peach:" %>
     </div>
-    <div class="align-self-center item-name text-center">
-      BOUNTIFUL BUTTLOADS
+    <div class="align-self-center item-name">
+      <center>BOUNTIFUL BUTTLOADS</center>
     </div>
   </div>
   <% end %>
-  <%= link_to calculate_path(measure: 'shit'), method: :post, class: 'text-decoration-none' do %>
-  <div class="card-category pressable color-<%= (1..8).to_a.sample %>">
+  <div class="measure-card card-category color-<%= (1..8).to_a.sample %>">
     <div class="symbol align-self-center">
       <%= emojify ":hankey:" %>
     </div>
@@ -40,9 +39,7 @@
       <center>STUPDENDOUS SHITLOADS</center>
     </div>
   </div>
-  <% end %>
-  <%= link_to calculate_path(measure: 'flush'), method: :post, class: 'text-decoration-none' do %>
-  <div class="card-category pressable color-<%= (1..8).to_a.sample %>">
+  <div class="measure-card card-category color-<%= (1..8).to_a.sample %>">
     <div class="symbol align-self-center">
       <%= emojify ":toilet:" %>
     </div>
@@ -50,5 +47,4 @@
       <center>FANTABULOUS FLUSHLOADS</center>
     </div>
   </div>
-  <% end %>
 </div>
