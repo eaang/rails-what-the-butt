@@ -1,11 +1,51 @@
-<h2>THE RESULT</h2>
-<%= @item.name %>
-<br>
-which is <%= @item.volume %> <%= @item.unit %>
-<h3>WORKS OUT TO</h3>
-<%= @results %> <%= @unit.upcase %>LOADS
-<br>
-<br>
+<div class="row justify-content-center mt-3">
+  <h1>YOU CHOSE...</h1>
+</div>
+<div id="show-container" class="card-container col-12 col-md-10 align-self-center">
+  <div class="text-right align-self-center display-4">
+    <%= emojify ":sparkles:" %>
+  </div>
+  <div id="choice-card" class="mb-4 mt-3 card-category color-<%= (1..8).to_a.sample %>">
+    <div class="symbol align-self-center">
+      <%= emojify ":#{@item.symbol}:" %>
+    </div>
+    <div class="align-self-center item-name">
+      <center><%= @item.name.upcase %></center>
+    </div>
+  </div>
+  <div class="text-left align-self-center display-4">
+    <%= emojify ":sparkles:" %>
+  </div>
+</div>
+<div class="row align-items-center flex-column">
+  <h2>WHICH EQUALS <%= pluralize(@results, @unit.upcase + 'LOAD' ).upcase %></h2>
+  <p>(that's <%= @item.volume.round %> <%= @item.unit %>!)</p>
+</div>
+<div class="row d-flex align-self-center justify-content-center col-12 col-md-8 col-xl-6">
+<%= link_to "NEW ITEM?", items_path, class: "btn new-button new-item btn-block mb-3 pressable color-#{(1..8).to_a.sample}" %>
+<%= link_to "NEW MEASURE?", item_path(@item), class: 'btn new-button new-measure btn-block pressable' %>
+</div>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Calculating <%= @unit.capitalize %>loads</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 How was this calculated?
 <br>
 <br>
@@ -14,6 +54,3 @@ Buttload: https://en.wikipedia.org/wiki/Tun_(unit)#History <-- using 126 gallons
 Shitload: https://www.livescience.com/61966-how-much-you-poop-in-lifetime.html <-- using 15.5 ounces
 <br>
 Flushload: https://www.home-water-works.org/indoor-use/toilets <-- using 3.5 gallons
-
-<li><%= link_to "NEW ITEM?", items_path %></li>
-<li><%= link_to "NEW MEASURE?", item_path(@item) %></li>
