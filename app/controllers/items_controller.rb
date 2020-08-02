@@ -15,7 +15,14 @@ class ItemsController < ApplicationController
   def create
     @item = Item.create(item_params)
 
-    redirect_to @item
+    if @item.valid?
+      @item.symbol = 'package'
+      @item.save
+
+      redirect_to @item
+    else
+      redirect_to new_item_path
+    end
   end
 
   def calculate
