@@ -17,7 +17,7 @@
     <%= emojify ":sparkles:" %>
   </div>
 </div>
-<div class="row align-items-center flex-column">
+<div class="row align-items-center flex-column px-5">
   <h2>WHICH EQUALS <%= pluralize(@results, @unit.upcase + 'LOAD' ).upcase %></h2>
   <p>(that's <%= link_to "#{@item.volume.round} #{@item.unit}", "#", data: { toggle: 'modal', target: '#calculator' } %>!)</p>
 </div>
