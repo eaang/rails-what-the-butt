@@ -19,38 +19,33 @@
 </div>
 <div class="row align-items-center flex-column">
   <h2>WHICH EQUALS <%= pluralize(@results, @unit.upcase + 'LOAD' ).upcase %></h2>
-  <p>(that's <%= @item.volume.round %> <%= @item.unit %>!)</p>
+  <p>(that's <%= link_to "#{@item.volume.round} #{@item.unit}", "#", data: { toggle: 'modal', target: '#calculator' } %>!)</p>
 </div>
 <div class="row d-flex align-self-center justify-content-center col-12 col-md-8 col-xl-6">
 <%= link_to "NEW ITEM?", items_path, class: "btn new-button new-item btn-block mb-3 pressable color-#{(1..8).to_a.sample}" %>
 <%= link_to "NEW MEASURE?", item_path(@item), class: 'btn new-button new-measure btn-block pressable' %>
 </div>
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="calculator" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Calculating <%= @unit.capitalize %>loads</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h5 class="modal-title">Calculating <%= @unit.capitalize %>loads</h5>
+        <button type="button" class="close mr-1" data-dismiss="modal"></button>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-body text-center">
+        <% case @unit %>
+        <% when 'butt' %>
+        Historically, one buttload (of alcohol) was about 126 gallons!<br>
+        (<a href="https://en.wikipedia.org/wiki/Tun_(unit)#History">source</a>)
+        <% when 'shit' %>
+        The approximate value of the average human poop is about 15.5 ounches!<br>
+        (<a href="https://www.livescience.com/61966-how-much-you-poop-in-lifetime.html">source</a>)
+        <% when 'flush' %>
+        One flush of water (in an oldschool toilet) uses about 3.5 gallons of water!<br>
+        (<a href="https://www.home-water-works.org/indoor-use/toilets">source</a>)
+        <% end %>
       </div>
     </div>
   </div>
 </div>
-
-How was this calculated?
-<br>
-<br>
-Buttload: https://en.wikipedia.org/wiki/Tun_(unit)#History <-- using 126 gallons
-<br>
-Shitload: https://www.livescience.com/61966-how-much-you-poop-in-lifetime.html <-- using 15.5 ounces
-<br>
-Flushload: https://www.home-water-works.org/indoor-use/toilets <-- using 3.5 gallons
